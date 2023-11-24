@@ -1,2 +1,4 @@
-package Recorrido_Dijkstra;public class Main {
+package Recorrido_Dijkstra;
+
+public class Main {
 }
