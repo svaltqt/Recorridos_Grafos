@@ -1,8 +1,4 @@
-package Recorrido_DSF_Madya;
-
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-
+package Recorrido_DFS_Madya;
 
 public class Main {
 
