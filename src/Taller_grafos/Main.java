@@ -55,14 +55,23 @@ public class Main {
                     numVertices = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de vértices para la matriz:"));
                     // Crear matriz para Dijkstra
                     dijkstraMatrix = new int[numVertices][numVertices];
+                    for (int i = 0; i < numVertices; i++) {
+                        for (int j = 0; j < numVertices; j++) {
+                            dijkstraMatrix[i][j] = 0;
+                        }
+                    }
                     break;
                 case 1:
                     // Implementar función para llenar matriz para Dijkstra
                     // Llenar la matriz manualmente pidiendo los valores al usuario
-                    for (int i = 0; i < numVertices; i++) {
-                        for (int j = 0; j < numVertices; j++) {
-                            dijkstraMatrix[i][j] = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor para la posición [" + i + "][" + j + "]"));
-                        }
+                    int numAristas = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de aristas:"));
+                    for (int k = 1; k <= numAristas; k++) {
+                        int posX = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el vértice de inicio para la arista "  + ":"));
+                        int posY = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el vértice de fin para la arista " + ":"));
+                        int weight = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el peso para la arista " + ":"));
+                        dijkstraMatrix[posX][posY] = weight;  // ejemplo  (2,3)
+                        dijkstraMatrix[posY][posX] = weight;  // ejemplo (3,2)
+                        System.out.println("(" +posX + "," + posY + ")" + " = " + weight );
                     }
                     break;
                 case 2:
@@ -81,7 +90,11 @@ public class Main {
                     break;
                 case 3:
                     // Implementar función para recorrido para Dijkstra
-                    break;
+                    int origen = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el origen del Recorrido: "));
+                    int destino = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el destino del Recorrido: "));
+                    Dijkstra ejemplo1 = new Dijkstra(dijkstraMatrix ,origen, destino);
+                    ejemplo1.imprimirRecorrido();
+                break;
                 case 4:
                     // Implementar función para distancia para Dijkstra
                     break;
@@ -119,10 +132,14 @@ public class Main {
                 case 1:
                     // Implementar función para llenar matriz para Kruskal
                     // Llenar la matriz manualmente pidiendo los valores al usuario
-                    for (int i = 0; i < numVertices; i++) {
-                        for (int j = 0; j < numVertices; j++) {
-                            kruskalMatrix[i][j] = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor para la posición [" + i + "][" + j + "]"));
-                        }
+                    int numAristas = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el número de aristas:"));
+                    for (int k = 1; k <= numAristas; k++) {
+                        int posX = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el vértice de inicio para la arista "  + ":"));
+                        int posY = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el vértice de fin para la arista " + ":"));
+                        int weight = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el peso para la arista " + ":"));
+                        kruskalMatrix[posX][posY] = weight;  // ejemplo  (2,3)
+                        kruskalMatrix[posY][posX] = weight;  // ejemplo (3,2)
+                        System.out.println("(" +posX + "," + posY + ")" + " = " + weight );
                     }
                     break;
                 case 2:
@@ -142,6 +159,7 @@ public class Main {
                     break;
                 case 3:
                     // Implementar función para recorrido para Kruskal
+
                     break;
                 case 4:
                     // Implementar función para distancia para Kruskal
