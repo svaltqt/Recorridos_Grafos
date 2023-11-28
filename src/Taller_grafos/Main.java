@@ -101,7 +101,7 @@ public class Main {
                     dijkstra.dijkstra(dijkstraMatrix, origen);
 
                     // Llamar al método obtenerRecorrido después de calcular distancias y recorridos
-                    List<Integer> recorrido = dijkstra.obtenerRecorrido(origen, destino);
+                    List<Integer> recorrido = dijkstra.obtenerRecorrido(destino);
 
 
                     // Construir el mensaje

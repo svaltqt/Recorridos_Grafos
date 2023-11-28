@@ -39,7 +39,7 @@ public class Dijkstra {
         }
     }
 
-    public List<Integer> obtenerRecorrido(int origen, int destino) {
+    public List<Integer> obtenerRecorrido(int destino) {
         List<Integer> recorrido = new ArrayList<>();
         int actual = destino;
 
