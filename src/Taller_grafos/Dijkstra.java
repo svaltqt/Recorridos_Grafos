@@ -16,7 +16,7 @@ public class Dijkstra {
         // Inicializar distancias, recorridos y visitados
         for (int i = 0; i < numVertices; i++) {
             distancias[i] = Integer.MAX_VALUE;
-            recorridos[i] = -1;  // -1 indica que el padre es desconocido
+            recorridos[i] = -1;  // -1 indica que el recorrido es desconocido
             visitados[i] = false;
         }
 
