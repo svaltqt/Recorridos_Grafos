@@ -1,5 +1,7 @@
 package Taller_grafos;
 import javax.swing.*;
+import java.util.List;
+
 
 public class Main {
 
@@ -35,6 +37,7 @@ public class Main {
         int option;
         int numVertices = 0; // Inicializamos el número de vértices
         int[][] dijkstraMatrix = null;
+        Dijkstra dijkstra = new Dijkstra();
 
         do {
             String[] dijkstraOptions = {"Crear Matriz", "Llenar Matriz", "Imprimir Matriz", "Recorrido", "Distancia", "Volver"};
@@ -72,6 +75,7 @@ public class Main {
                         dijkstraMatrix[posX][posY] = weight;  // ejemplo  (2,3)
                         dijkstraMatrix[posY][posX] = weight;  // ejemplo (3,2)
                         System.out.println("(" +posX + "," + posY + ")" + " = " + weight );
+                        System.out.println("(" +posY + "," + posX + ")" + " = " + weight );
                     }
                     break;
                 case 2:
@@ -92,11 +96,33 @@ public class Main {
                     // Implementar función para recorrido para Dijkstra
                     int origen = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el origen del Recorrido: "));
                     int destino = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el destino del Recorrido: "));
-                    Dijkstra ejemplo1 = new Dijkstra(dijkstraMatrix ,origen, destino);
-                    ejemplo1.imprimirRecorrido();
-                break;
+
+                    // Llamar a dijkstra para calcular distancias y recorridos
+                    dijkstra.dijkstra(dijkstraMatrix, origen);
+
+                    // Llamar al método obtenerRecorrido después de calcular distancias y recorridos
+                    List<Integer> recorrido = dijkstra.obtenerRecorrido(origen, destino);
+
+
+                    // Construir el mensaje
+                    StringBuilder mensaje = new StringBuilder("Recorrido desde " + origen + " hasta " + destino + ":\n");
+
+                    // Agregar cada vértice al mensaje
+                    for (int vertice : recorrido) {
+                        mensaje.append(vertice).append("\t ");
+                    }
+
+                    // Mostrar el mensaje en un JOptionPane
+                    JOptionPane.showMessageDialog(null, mensaje.toString(), "Recorrido", JOptionPane.INFORMATION_MESSAGE);
+
+
+                    break;
                 case 4:
                     // Implementar función para distancia para Dijkstra
+                    int partida = Integer.parseInt(JOptionPane.showInputDialog("Desde el Nodo: "));
+                    int llegada = Integer.parseInt(JOptionPane.showInputDialog("Hasta el Nodo: "));
+                    int distancia = dijkstra.calcularDistancia(dijkstraMatrix, partida, llegada);
+                    JOptionPane.showMessageDialog(null, "La distancia más corta desde " + partida + " hasta " + llegada + " es: " + distancia);
                     break;
             }
 
