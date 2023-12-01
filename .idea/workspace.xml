@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24258bac-94bf-4fd9-92a2-977c02bc42ef" name="Changes" comment="Update Clases">
+    <list default="true" id="24258bac-94bf-4fd9-92a2-977c02bc42ef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taller_grafos/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taller_grafos/Dijkstra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taller_grafos/Kruskal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taller_grafos/Kruskal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taller_grafos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taller_grafos/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +43,6 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/naxxu/Downloads/ProyectoPolinomios (1)&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -61,47 +60,11 @@
       <option name="presentableId" value="Default" />
       <updated>1700845743944</updated>
       <workItem from="1700845744933" duration="8817000" />
-      <workItem from="1700941728266" duration="280000" />
-      <workItem from="1700942019161" duration="4376000" />
-      <workItem from="1700960338525" duration="196000" />
-      <workItem from="1700973247195" duration="2696000" />
-      <workItem from="1701024567321" duration="2437000" />
-      <workItem from="1701101563423" duration="13250000" />
+      <workItem from="1701454791738" duration="4638000" />
     </task>
-    <task id="LOCAL-00001" summary="Dijkstra Finalizado">
-      <option name="closed" value="true" />
-      <created>1701150945187</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1701150945187</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Update del Menu">
-      <option name="closed" value="true" />
-      <created>1701157639854</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1701157639854</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Update Clases">
-      <option name="closed" value="true" />
-      <created>1701157762028</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1701157762028</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dijkstra Finalizado" />
-    <MESSAGE value="Update del Menu" />
-    <MESSAGE value="Update Clases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Clases" />
   </component>
 </project>

@@ -133,9 +133,9 @@ public class Main {
         int option;
         int[][] kruskalMatrix = null;
         int numVertices = 0; // Inicializamos el número de vértices
-
+        Kruskal kruskal = new Kruskal();
         do {
-            String[] kruskalOptions = {"Crear Matriz", "Llenar Matriz", "Imprimir Matriz", "Recorrido", "Distancia", "Vertices", "Volver"};
+            String[] kruskalOptions = {"Crear Matriz", "Llenar Matriz", "Imprimir Matriz", "Recorrido", "Volver"};
             option = JOptionPane.showOptionDialog(
                     null,
                     "Selecciona una opción para Kruskal:",
@@ -185,16 +185,19 @@ public class Main {
                     break;
                 case 3:
                     // Implementar función para recorrido para Kruskal
+                    List<int[]> resultadoKruskal = kruskal.aplicarKruskal(kruskalMatrix);
 
-                    break;
-                case 4:
-                    // Implementar función para distancia para Kruskal
-                    break;
-                case 5:
-                    // Implementar función para vértices para Kruskal
+                    // Mostrar el resultado con JOptionPane
+                    StringBuilder resultadoString = new StringBuilder("Aristas del Árbol de Expansión Mínima:\n");
+                    for (int[] edge : resultadoKruskal) {
+                        resultadoString.append(edge[0]).append(" -- ").append(edge[1]).append(" == ").append(edge[2]).append("\n");
+                    }
+
+                    javax.swing.JOptionPane.showMessageDialog(null, resultadoString.toString());
+
                     break;
             }
 
-        } while (option != 6); // 6 es la opción "Volver"
+        } while (option != 4); // 6 es la opción "Volver"
     }
 }
